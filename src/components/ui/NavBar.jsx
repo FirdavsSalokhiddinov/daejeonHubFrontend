@@ -1,0 +1,39 @@
+import { Link } from 'react-router-dom';
+import { FaCartShopping } from "react-icons/fa6";
+import styles from "./NavBar.module.css";
+import { Navbarlink } from './Navbarlink';
+
+const NavBar = () => {
+  return (
+   <nav className={`navbar navbar-expand-lg navbar-light bg-white shadows-sm py-3 ${styles.stickyNavbar}`}>
+        <div className='container'>
+            <Link to='/' className='navbar-brand fw-bold text-uppercase'>SHOPPIT</Link>
+            <button
+              className='navbar-toggler'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#navbarContent'
+              aria-controls='navbarContent'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
+              >
+                <span className='navbar-toggler-icon'></span>
+              </button>
+              <div className='collapse navbar-collapse' id='navbarContent'>
+                <NavBarlink/>
+                <Link to='/cart' className={`btn btn-dark ms-3 rounded-pill position-relative ${styles.reponsiveCart}`}>
+                    <FaCartShopping />
+                    <span
+                      className='position-absolute top-0 start-100 translate-middle badge rounded-pill'
+                      style={{ fontSize: '0.85rem', padding: '0.5rem 0.65em', backgroundColor: '#6050DC' }}
+                      >
+                        12
+                      </span>
+                </Link>
+              </div>
+        </div>
+   </nav>
+  )
+}
+
+export default NavBar
