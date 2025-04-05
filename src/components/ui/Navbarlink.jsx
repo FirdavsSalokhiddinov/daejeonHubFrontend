@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Navbarlink = () => {
+const NavBarLink = () => {
   return (
     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className='nav-item'>
@@ -19,4 +19,4 @@ const Navbarlink = () => {
   )
 }
 
-export default Navbarlink
+export default NavBarLink

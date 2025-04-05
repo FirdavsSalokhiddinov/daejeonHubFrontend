@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaCartShopping } from "react-icons/fa6";
 import styles from "./NavBar.module.css";
-import { Navbarlink } from './Navbarlink';
+import NavBarLink from './NavBarLink';
 
 const NavBar = () => {
   return (
@@ -20,7 +20,7 @@ const NavBar = () => {
                 <span className='navbar-toggler-icon'></span>
               </button>
               <div className='collapse navbar-collapse' id='navbarContent'>
-                <NavBarlink/>
+                <NavBarLink />
                 <Link to='/cart' className={`btn btn-dark ms-3 rounded-pill position-relative ${styles.reponsiveCart}`}>
                     <FaCartShopping />
                     <span

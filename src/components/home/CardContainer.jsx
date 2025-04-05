@@ -1,4 +1,4 @@
-import React from 'react'
+import HomeCard from './HomeCard';
 
 const CardContainer = () => {
   return (
